@@ -20,7 +20,6 @@ public class LogMain {
                 (Comparator.comparing(Request::getResponseTime));
 
         Path directoryOut = pathOut.getParent();
-        long startTime = System.currentTimeMillis();
         int requestNum = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
             String line;
@@ -76,7 +75,7 @@ public class LogMain {
             List<IP> top10Ip = data.values().stream()
                                .filter(ip -> ip instanceof IP)
                                .map(ip-> (IP) ip)
-                               .sorted(Comparator.comparingInt(  IP :: getFrequency).reversed())
+                               .sorted(Comparator.comparingInt( IP :: getFrequency).reversed())
                                .limit(10).toList();
             List<Route> fastestRoutes = data.values().stream()
                                         .filter(r-> r instanceof Route)
@@ -85,9 +84,6 @@ public class LogMain {
                                         .limit(10)
                                         .toList();
 
-            long endTime = System.currentTimeMillis();
-            long elapsedTime = endTime - startTime;
-            System.out.println("Total execution time: " + elapsedTime + " milliseconds");
 
             try (Formatter output = new Formatter(directoryOut + "output.txt")) {
 
