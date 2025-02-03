@@ -12,7 +12,7 @@ public class MainApp {
         calendar.readFile(path);
 
 
-//        String[] responseParts = findChoice();
+
 //        String choice = responseParts[0];
 //        while(!choice.contains("quit")){
 //            displayMenu();
