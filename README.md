@@ -6,10 +6,10 @@ The author of this project is Vikensa Grabocka. It consists of two programs:
 **1) Processing access log files**
 
 This program processes access log
-files and extract several cumulative statistics. 
+files and extracts several cumulative statistics. 
 Please provide the path of the access log file. Each line in the access log file should represent an incoming HTTP request to the
 web server. Each request should contain the following fields:
-client ip, request arrival timestamp, HTTP method of the request, url of the request, 
+client IP, request arrival timestamp, HTTP method of the request, url of the request, 
 response processing time in milliseconds. If a field is not present a single hyphen character should be displayed.
 All the fields are separated by a single space character.
 
