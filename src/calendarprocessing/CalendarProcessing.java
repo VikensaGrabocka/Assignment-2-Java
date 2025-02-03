@@ -1,14 +1,13 @@
 package calendarprocessing;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
 public class CalendarProcessing {
-    private static Comparator<Date> dateComparator = Comparator.comparing(Date::getYear).thenComparing(Date::getMonth).thenComparing(Date::getDay);
-    private static Comparator<Task> timeComparator = Comparator.comparing(Task::getStartTimeInMinutes);
+    private static final Comparator<Date> dateComparator = Comparator.comparing(Date::getYear).thenComparing(Date::getMonth).thenComparing(Date::getDay);
+    private static final Comparator<Task> timeComparator = Comparator.comparing(Task::getStartTimeInMinutes);
     private TreeMap<Date, PriorityQueue<Task>> tasks = new TreeMap<>(dateComparator);
 
     public CalendarProcessing() {
@@ -62,7 +61,9 @@ public class CalendarProcessing {
                 }
             }
         }
-        System.out.println("There is no task with id " + taskId + " on " + date);
+        if(!date.toString().equals("-1/-1/-1")){
+            System.out.println("There is no task with id " + taskId + " on " + date);
+        }
         System.out.println();
     }
 

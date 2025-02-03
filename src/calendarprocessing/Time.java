@@ -1,20 +1,12 @@
 package calendarprocessing;
 
 public class Time {
-    private String startTime;
-    private int duration;
+    private final String startTime;
+    private final int duration;
 
     public Time(String startTime, int duration) {
         this.startTime = startTime;
         this.duration = duration;
-    }
-
-    public String getStartTime() {
-        return startTime;
-    }
-
-    public int getDuration() {
-        return duration;
     }
 
 

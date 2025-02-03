@@ -12,50 +12,6 @@ public class MainApp {
         calendar.readFile(path);
 
 
-
-//        String choice = responseParts[0];
-//        while(!choice.contains("quit")){
-//            displayMenu();
-//            try{
-////                String response = input.nextLine();
-////                String[] responseParts = findChoice();
-////                choice = responseParts[0];
-////                int spacePosition = response.indexOf(" ");
-////                if(spacePosition!=-1){
-////                    choice = response.substring(0, spacePosition);}
-////                else{
-////                    choice = response;
-////                }
-//                if(choice.equals("display")){
-//                    calendar.displayDay(responseParts[1]);
-//                }else if(choice.equals("add")) {
-//                    calendar.addTask(responseParts[1]);
-//                }else if(choice.equals("delete")){
-//                    calendar.deleteTask(responseParts[1]);
-//                }else if(choice.equals("export")){
-//                    calendar.export(responseParts[1]);
-//                }else{
-//                    System.out.println("Invalid choice!");
-//                }
-//                responseParts = findChoice();
-//                choice = responseParts[0];
-//
-//            }catch(Exception e){
-//                System.out.println("Please provide the data in the correct format!");
-//                displayMenu();
-////                String response = input.nextLine();
-////                int spacePosition = response.indexOf(" ");
-////                if(spacePosition!=-1){
-////                    choice = response.substring(0, spacePosition);}
-////                else{
-////                    choice = response;
-////                }
-//                //choice = response.substring(0, spacePosition);
-//                responseParts = findChoice();
-//                choice = responseParts[0];
-////                choice = findChoice()[0];
-//
-//            }
         String choice = "";
         do {
             try {
